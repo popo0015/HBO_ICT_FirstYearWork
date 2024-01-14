@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/css/bulma.min.css" />
+    <title>TOP2000</title>
+</head>
+
+<body>
+    <nav class="navbar is-dark topNav">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                    <img src="./assets/img/NPO-Radio-2-Top-2000-Logo-RGB.png">
+                </a>
+            </div>
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <div class="navbar-item">
+                        Select edition&nbsp;
+                        <div class="select">
+                            <select id="edition_select">
+                            </select>
+                          </div>
+                    </div>
+                </div>
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <input id="search" class="input" type="text" placeholder="Search">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="container">
+        <div class="columns">
+            <div id="right-column" class="column is-12">
+                <h1 class="title is-1">Top 100 of the TOP2000 edition <span id="edition">2016</span></h1>
+                <article class="card m-2 p-2">
+                    <div class="table-container">
+                        <table class="table is-striped is-fullwidth">
+                            <thead>
+                                <tr>
+                                    <th><abbr title="Position">#</abbr></th>
+                                    <th>Artist</th>
+                                    <th>Title</th>
+                                    <th><abbr title="Released in the year">Year</abbr></th>
+                                </tr>
+                            </thead>
+                            <tbody id="songs">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <div class="columns is-mobile is-centered">
+                    <div class="field is-grouped is-grouped-multiline">
+                        <div class="control">
+                            <div class="tags has-addons">
+                                <a class="tag is-link" href="https://www.nporadio2.nl/top2000">Source</a>
+                                <span class="tag is-light">NPO Radio 2</span>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <div class="tags has-addons">
+                                <a class="tag is-link" href="https://github.com/dwaard">Curated by</a>
+                                <span class="tag is-light">dwaard</span>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <div class="tags has-addons">
+                                <a class="tag is-link" href="https://github.com/BulmaTemplates/bulma-templates">Bulma
+                                    Templates</a>
+                                <span class="tag is-light">Daniel Supernault</span>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <div class="tags has-addons">
+                                <a class="tag is-link">The source code is licensed</a>
+                                <span class="tag is-light">MIT &nbsp;<i class="fa fa-github"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>

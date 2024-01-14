@@ -1,0 +1,55 @@
+html,
+body {
+    height: 100%;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1em;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: aquamarine;
+    padding:5px;
+}
+
+table{
+    width: 100%;
+}
+
+th{
+    text-align: left;
+}
+
+input, select, button{
+    width: 200px;
+    margin:10px;
+    font-size: 1.2em;
+    padding: 5px;
+}
+
+.laps{
+    width: 200px;
+    background-color: deepskyblue;
+    padding: 15px;
+}
+
+input[type='number']{
+   width: 185px; 
+}
+
+input[type='submit']{
+    font-size: 2em !important;
+}
+
+.time {
+    font-family: monospace;
+}

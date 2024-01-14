@@ -1,0 +1,104 @@
+html,
+body {
+    height: 100%;
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 1.2em;
+}
+
+button {
+    display: inline-block;
+    width: 100%;
+}
+
+input {
+    width: 50%;
+}
+
+input[type=submit] {
+    display: inline-block;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: blue;
+    border: 1px solid blue;
+    color: #fff;
+    padding: 5px;
+}
+
+button:hover {
+    background-color: aqua;
+    color: #000;
+
+}
+
+.move-to-left {
+    display: inline-block;
+    padding: 5px;
+}
+
+.input-row {
+    margin-bottom: 10px;
+}
+
+.container {
+    width: 400px;
+    background-color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 30px;
+}
+
+.car-specification {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.car-category {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    padding: 10px;
+}
+
+.category-label{
+    text-align: center;
+    font-size: 8em;
+}
+
+.category-price {
+    text-align: center;
+}
+
+.bg-green {
+    background-color: greenyellow;
+}
+
+.bg-red {
+    background-color: red;
+}
+
+.error{
+    background-color: red;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px;
+}

@@ -1,0 +1,95 @@
+html,
+body {
+    height: 100%;
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 1.2em;
+}
+
+button {
+    display: inline-block;
+    width: 100%;
+}
+
+select{
+    width: 100%;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+input[type=submit] {
+    display: inline-block;
+}
+
+label {
+    text-align: center;
+    display: inline-block;    
+    margin-bottom: 10px;
+    font-size:1.2em;
+}
+
+button {
+    background-color: blue;
+    border: 1px solid blue;
+    color: #fff;
+    padding: 5px;
+}
+
+button:hover {
+    background-color: aqua;
+    color: #000;
+
+}
+
+.container {
+    width: 800px;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    flex-direction: row;
+    padding: 30px;
+}
+
+.bg-green {
+    background-color: rgb(6, 255, 222);
+}
+
+.bg-red {
+    background-color: red;
+}
+
+.bg-yellow{
+    background-color:rgb(255, 230, 6)
+}
+
+.groceryImage{
+    margin: 10px;
+    border: 5px solid #fff;
+    border-radius: 10px;
+}
+
+#groceryList{
+    background-color: lightpink;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 20px;
+}
+
+#groceryDetails{
+    background-color: lightblue;
+    padding: 20px;
+    width: 300px;
+    
+}

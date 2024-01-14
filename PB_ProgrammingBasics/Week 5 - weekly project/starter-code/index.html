@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/bulma.min.css" />
+    <style>
+        body {
+            background-image: url("./assets/img/80s-background.jpg");
+            background-repeat: repeat;
+        }
+    </style>
+    <title>80s Extravaganza</title>
+</head>
+
+<body>
+    <nav class="navbar is-white topNav">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="../">
+                    80s Extravaganza
+                </a>
+            </div>
+        </div>
+    </nav>
+    <section class="container">
+        <div class="columns">
+            <div id="left-column" class="column is-4">
+                <div class="card m-2 p-2">
+                    <div class="field">
+                        <label class="label">Video ID</label>
+                        <div class="control">
+                          <input id="video-id" class="input" type="text" placeholder="YouTube Video ID">
+                        </div>
+                        <p class="help">
+                            <a href="https://www.youtube.com/watch?v=liJVSwOiiwg" target="_blank">
+                                Learn how to get the video ID from YouTube
+                            </a>
+                        </p>
+                    </div>
+                    <div class="field">
+                        <label class="label">Artist</label>
+                        <div class="control">
+                          <input id="artist" class="input" type="text" placeholder="Artist name">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Title</label>
+                        <div class="control">
+                          <input id="title" class="input" type="text" placeholder="The title of the song">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Duration</label>
+                        <div class="control">
+                          <input id="duration" class="input" type="text" placeholder="">
+                        </div>
+                        <p class="help">The duration must be in seconds</p>
+                    </div>
+    
+                    <button id="add-button" class="button is-primary is-fullwidth is-block is-alt is-large">Add</button>
+                    </div>
+            </div>
+            <div id="right-column" class="column is-8">
+                <article class="card m-2 p-2">
+                    <div class="media">
+                        <div class="media-content">
+                            <div class="content">
+                                <h4>80s Extravaganza Playlist</h4>
+                            </div>
+                        </div>
+                        <div class="media-right">
+                            Total airtime:&nbsp;<span id="airtime"></span>
+                        </div>
+                    </div>
+                </article>
+                <div id="playlist">
+                    <!--add things here-->
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <div class="columns is-mobile is-centered">
+                    <div class="field is-grouped is-grouped-multiline">
+                        <div class="control">
+                            <div class="tags has-addons">
+                                <a class="tag is-link" href="https://github.com/dwaard">Curated by</a>
+                                <span class="tag is-light">dwaard</span>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <div class="tags has-addons">
+                                <a class="tag is-link" href="https://github.com/BulmaTemplates/bulma-templates">Bulma Templates</a>
+                                <span class="tag is-light">Daniel Supernault</span>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <div class="tags has-addons">
+                                <a class="tag is-link">The source code is licensed</a>
+                                <span class="tag is-light">MIT &nbsp;<i class="fa fa-github"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./assets/js/dataset.js"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>

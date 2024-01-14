@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>My Favourite Playlist</title>
+</head>
+
+<body>
+    <h1>80s playlist details</h1>
+    <p>Airtime: <span id="total-airtime">60 minutes</span></p>
+    <div id="container" class="container">
+        <div class="playlist-specification bg-green" id="car-specification">
+            <form action="" id="number-selection-form">
+                <div class="input-row">
+                    <label for="inputNumber">Search number from playlist</label>
+                    <select name="inputNumber" id="inputNumber">
+                        <option value="Wake me up be for you Go-Go">Wake me up be for you Go-Go</option>
+                        <option value="Never gonna give you up">Never gonna give you up</option>
+                        <option value="The final countdown">The final countdown</option>
+                    </select>
+                </div>
+                <button type="submit" id="sbmButton">Search</button>
+            </form>
+        </div>
+        <div id="number-details" class="number-details">
+            <h1 id="artist" class="bg-yellow">Wham</h1>
+            <p id="number" class="bg-yellow">Wake me up be for you Go-Go</p>
+            <p id="duration" class="bg-yellow">Duration: 3.43 minutes</p>
+        </div>
+    </div>
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>

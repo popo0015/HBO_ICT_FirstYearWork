@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/bulma.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>BMI advisor</title>
+</head>
+
+<body>
+    <section class="hero is-info is-fullheight">
+        <div class="hero-head">
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item" href="#">
+                            <h1 class="is-size-1">FooBar Fitness</h1>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="hero-body">
+            <div class="container">
+                <div class="column is-6 is-offset-3">
+                    <h1 class="title">
+                        BMI advice for <span id="username"></span>
+                    </h1>
+                    <div class="subtitle">
+                        Your age: <span id="age"></span><br />
+                        Your height: <span id="height"></span><br />
+                        Your weight: <span id="weight"></span><br />
+                    </div>
+                    <div id="advice-card" class="box">
+                        <div id="advice-card">
+                            <div id="advice-text" class="m-4">
+                                [your advice here]
+                            </div>
+                            <div class="field is-grouped">
+                                <p class="control is-expanded">
+                                    <input class="input" type="text" placeholder="Enter your email">
+                                </p>
+                                <p class="control">
+                                    <a class="button is-info">
+                                        Contact Us
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="content has-text-centered has-text-grey is-italic">
+            <a href='https://nl.freepik.com/fotos/sport'>Sport foto gemaakt door tawatchai07 - nl.freepik.com</a>
+        </footer>
+        </section>
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>

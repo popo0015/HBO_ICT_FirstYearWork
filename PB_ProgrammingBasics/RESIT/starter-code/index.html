@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/bulma.min.css" />
+    <link rel="stylesheet" href="./assets/css/potb.css" />
+    <title>POTB Rollercoaster Maintenance Log</title>
+    <style>
+    </style>
+</head>
+
+<body class="has-navbar-fixed-top">
+    <nav class="navbar is-fixed-top wood-texture is-dark topNav">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><mask id="circleFlagsPirate0"><circle cx="256" cy="256" r="256" fill="#fff"/></mask><g mask="url(#circleFlagsPirate0)"><path fill="#333" d="M0 0h512v512H0Z"/><path fill="#eee" d="M368 109c-10-1-18 7-18 17c0 5 2 11 6 14l-17 17l17 16l16-17c4 4 9 6 14 6c10 0 18-8 17-18c1-10-7-18-17-18c0-10-8-18-18-17zm-16 226l-17 16l21 21c-4 4-6 9-6 14c0 10 8 18 18 17c10 1 18-7 18-17c10 0 18-8 17-18c1-10-7-18-17-18c-5 0-10 2-14 6zm-96-185c-59 0-106 48-106 106v41s14 8 36 29c21 22 29 36 29 36h82s8-14 29-36c22-21 36-29 36-29v-41c0-58-47-106-106-106Z"/><circle cx="206" cy="267.7" r="35.3" fill="#333"/><circle cx="306" cy="267.7" r="35.3" fill="#333"/><path fill="#eee" d="M144 109c10-1 18 7 18 17c0 5-2 11-6 14l17 17l-17 16l-16-17c-4 4-9 6-14 6c-10 0-18-8-17-18c-1-10 7-18 17-18c0-10 8-18 18-17zm16 226l17 16l-21 21c4 4 6 9 6 14c0 10-8 18-18 17c-10 1-18-7-18-17c-10 0-18-8-17-18c-1-10 7-18 17-18c5 0 10 2 14 6z"/><path fill="#333" d="M256 293a8 8 0 0 0-7 4l-13 20a8 8 0 0 0 7 12h26a8 8 0 0 0 7-12l-13-20a8 8 0 0 0-7-4Z"/></g></svg>                    
+                    &nbsp;<span class="pirata is-size-4">PotB</span>
+                </a>
+                <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu" id="navMenu">
+                <div class="navbar-start">
+                    <a class="navbar-item">
+                        Home
+                    </a>
+
+                    <a class="navbar-item">
+                        Documentation
+                    </a>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            More
+                        </a>
+
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item">
+                                Please do not
+                            </a>
+                            <a class="navbar-item">
+                                Click around and
+                            </a>
+                            <a class="navbar-item">
+                                Waste very valuable
+                            </a>
+                            <hr class="navbar-divider">
+                            <a class="navbar-item" onclick="alert('Really DONT')">
+                                Exam time
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="container">
+        <div class="columns">
+            <div class="column is-12">
+                <h1 class="title pirata has-text-centered has-text-dark has-text-shadow is-1">Pirates of the Babibbian Rollercoaster
+                    Maintenance Log</h1>
+                <div class="card m-2 p-2">
+                    Items shown: <span id="item-count"></span>
+                    <br>
+                    Filters:
+                    <span id="filter-list"></span>
+                </div>
+                <article class="card m-2 p-2">
+                    <div class="table-container">
+                        <table class="table is-striped is-fullwidth">
+                            <thead>
+                                <tr>
+                                    <th><abbr title="Unique identifier of the entry">#</abbr></th>
+                                    <th><abbr title="Timestamp the entry was posted">Created at</abbr></th>
+                                    <th>Tags</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody id="log">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <footer class="footer wood-texture">
+        <div class="container">
+            <div class="content has-text-centered">
+                <div class="columns is-mobile is-centered">
+                    <div class="field is-grouped is-grouped-multiline">
+                        <div class="control">
+                            <div class="tags has-addons">
+                                <a class="tag is-link" href="#">Source</a>
+                                <span class="tag is-light">Louise</span>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <div class="tags has-addons">
+                                <a class="tag is-link" href="https://github.com/dwaard">Curated by</a>
+                                <span class="tag is-light">dwaard</span>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <div class="tags has-addons">
+                                <a class="tag is-link" href="https://github.com/BulmaTemplates/bulma-templates">Bulma
+                                    Templates</a>
+                                <span class="tag is-light">Daniel Supernault</span>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <div class="tags has-addons">
+                                <a class="tag is-link">The source code is licensed</a>
+                                <span class="tag is-light">MIT &nbsp;<i class="fa fa-github"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./assets/js/log.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Add a click event on each of them
+            $navbarBurgers.forEach( el => {
+            el.addEventListener('click', () => {
+
+                    // Get the target from the "data-target" attribute
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+
+                });
+            });
+
+        });
+    </script>
+</body>
+
+</html>

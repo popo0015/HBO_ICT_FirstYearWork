@@ -1,0 +1,12 @@
+#title {
+    font-family: 'Pangolin', cursive;
+}
+
+#playfield {
+    display: block;
+}
+
+.playfield_item {
+    display: block;
+    position: absolute;
+}

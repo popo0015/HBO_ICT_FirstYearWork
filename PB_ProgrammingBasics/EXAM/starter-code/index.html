@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Learn Binary</title>
+</head>
+
+<body>
+    <h1>Learn Binary ASCII</h1>
+    <div id="container" class="container bg-green">
+        <div id="welcome" class="message box bg-info">
+            Welcome to the amazing Learn Binary Quiz<br>
+            Can you see which text the following binary code represents?<br>
+            Type your answer in the aswer box below
+        </div>
+        <div id="error" class="message box bg-error">
+            I'm sorry <span id="wrong-answer">#</span> is NOT the correct answer<br>
+            Try again!
+        </div>
+        <div id="success" class="message box bg-success">
+            Good job! <span id="correct-answer">#</span> is correct.<br>
+            Now, try the next question.
+        </div>
+        <div id="question" class="box bg-orangered">
+            0110...
+        </div>
+        <div class="box">
+            <input type="text" id="inputAnswer">
+            <input type="submit" id="check" value="check">
+        </div>
+    </div>
+    <div>
+        <p>Attempts: <span id="attempts">#</span></p>
+        <p>Questions left to answer: <span id="questions-left">#</span></p>
+    </div>
+    <!-- The Modal -->
+    <div id="winModal" class="modal hidden">
+        <!-- Modal content should go here -->
+    </div>
+    <script src="./assets/js/variables.js"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>

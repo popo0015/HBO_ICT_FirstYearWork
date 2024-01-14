@@ -1,0 +1,19 @@
+body {
+    background-image: url('../img/pirate-ship-background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+.wood-texture {
+    background-color: #241b00; 
+    background-image: url('../img/wood-pattern.png');
+}
+
+.pirata {
+    font-family: 'Pirata One';
+}
+
+.has-text-shadow {
+    text-shadow: 2px 2px 2px #DFDFDF;
+}

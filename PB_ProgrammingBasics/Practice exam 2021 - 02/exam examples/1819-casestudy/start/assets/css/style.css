@@ -1,0 +1,48 @@
+html,
+body {
+    height: 100%;
+    font-size: 1em;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 1.2em;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input {
+    font-size: 1.2em;
+}
+
+.container {
+    width: 400px;
+    background-color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.question {
+    margin-top: 20px;
+    background-color: orangered;
+    padding: 10px 20px;
+}
+
+.bg-green{
+    background-color: greenyellow;
+}
+
+.bg-red{
+    background-color: red;
+}

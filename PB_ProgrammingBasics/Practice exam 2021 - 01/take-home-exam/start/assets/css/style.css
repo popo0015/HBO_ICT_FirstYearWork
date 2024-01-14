@@ -1,0 +1,72 @@
+html,
+body {
+  height: 100%;
+  font-size: 1em;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.2em;
+  background-color: yellowgreen;
+  display: inline-block;
+  padding: 10px;
+}
+
+ul {
+  margin: 0;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+label {
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.container {
+  width: 800px;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  flex-direction: row;
+  background-color: azure;
+  border: 10px solid black;
+  padding: 30px;
+  margin-top: 40px;
+}
+
+.provinces {
+  width: 50%;
+  /* border: 1px solid black; */
+  /* padding: 20px; */
+}
+
+.vaccination-grade {
+  width: 50%;
+  /* padding: 0; */
+  /* border: 1px solid black; */
+  /* padding: 20px; */
+}
+
+.enlarge{
+  font-size: 20px;
+}
+.green{
+  color: greenyellow;
+}

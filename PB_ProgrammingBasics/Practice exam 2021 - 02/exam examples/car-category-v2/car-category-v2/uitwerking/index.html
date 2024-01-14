@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Car Category</title>
+</head>
+
+<body>
+    <h1>Which category is for your car</h1>
+    <p>Check your car category for toll roads in France.</p>
+    <div id="container" class="container bg-green">
+        <div class="car-specification" idspecification="car-">
+            <form action="" id="car-specification-form">
+                <div class="input-row">
+                    <label for="inputVehicleType">Vehicle type</label>
+                    <select name="inputVehicleType" id="inputVehicleType">
+                        <option value="car">Car</option>
+                        <option value="bus">Bus</option>
+                        <option value="camper">Camper</option>
+                        <option value="deliveryTruck">Delivery Truck</option>
+                        <option value="commercialVehicle">Commercial Vehicle</option>
+                        <option value="motor">Motor</option>
+                        <option value="trike">Trike</option>
+                    </select>
+                </div>
+                <div class="input-row">
+                    <label for="inputHeight">Height of your vehiclce</label>
+                    <input type="number" id="inputHeight" value=0><span class="move-to-left">m</span>
+                </div>
+                <button type="submit" id="sbmButton">Submit</button>
+            </form>
+        </div>
+        <div class="car-category" id="car-category">
+            <div id="category-label" class="category-label"></div>
+            <div id="category-price" class="category-price"></div>
+        </div>    
+    </div>
+    <div id="message"></div>
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
