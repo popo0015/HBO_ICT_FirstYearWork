@@ -1,0 +1,22 @@
+{
+  "name": "ts-skeleton-app",
+  "version": "2023.1",
+  "repository": "git@github.com:HZ-HBO-ICT/ts-skeleton-app.git",
+  "author": "HZ University of Applied Sciences",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch "
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.11",
+    "@typescript-eslint/parser": "^6.11",
+    "eslint": "^8.53.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-filenames": "^1.3.2",
+    "eslint-plugin-jsdoc": "^46.9.0",
+    "typescript": "5.2"
+  }
+}

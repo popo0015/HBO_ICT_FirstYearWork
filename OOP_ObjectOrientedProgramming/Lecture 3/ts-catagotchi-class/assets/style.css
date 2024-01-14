@@ -1,0 +1,44 @@
+#game {
+    margin: auto;
+    background-image: url('catbg.png');
+    height: 627px;
+    width: 511px;
+    position: relative;
+}
+
+.game-button {
+    height: 55px;
+    width: 55px;
+    position: absolute;
+    cursor: pointer;
+}
+
+#btn-feed {
+    top: 395px;
+    left: 130px;
+}
+#btn-play {
+    top: 425px;
+    left: 228px;
+}
+#btn-pet {
+    top: 395px;
+    left: 327px;
+}
+
+#screen {
+    position: absolute;
+    height: 195px;
+    width: 290px;
+    top: 150px;
+    left: 110px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+img {
+    width: 20%;
+    margin-top: 18px;
+    margin-left: 190px;
+}

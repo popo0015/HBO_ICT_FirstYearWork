@@ -1,0 +1,110 @@
+body {
+    background-color: beige;
+}
+
+#game {
+    font-family: 'Raleway';
+    font-size: 16pt;
+    border: 2px solid rgb(42, 42, 42);
+    padding: 7px;
+    background-color: rgb(249, 249, 249);
+}
+
+#guesses {
+  font-size: 50pt;
+  line-height: 1em;
+  height: 350px;
+  width: 400px;
+}
+
+.guess {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0px 20px;
+}
+
+.letter {
+  text-align: center;
+  width: 72px;
+}
+
+#answer {
+  text-align: center;
+}
+
+#name {
+    text-align: center;
+    font-size: 4em;
+    font-family: 'Raleway';
+    font-weight: bold;
+    color: rgb(91, 71, 0);
+    text-transform: uppercase;
+}
+
+#game {
+    width: 400px;
+    margin: auto;
+    display: grid;
+    gap: 5px;
+}
+
+#inputGuess {
+    font-family: 'Raleway';
+    font-size: 2em;
+    width: 90%;
+    text-align: center;
+    justify-self: center;
+    padding: 7px;
+    text-transform: uppercase;
+}
+
+button {
+    font-family: 'Raleway';
+    appearance: none;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 18px 16px;
+}
+
+#makeguess {
+    background-color: #2ea44f;
+}
+
+#makeguess:hover {
+  background-color: #2c974b;
+}
+
+#makeguess:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+}
+
+#makeguess:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+
+#restart {
+    background-color: #a42e2e;
+}
+
+#restart:hover {
+  background-color: #852323;
+}
+
+#restart:focus {
+  box-shadow: rgba(164, 46, 46, 0.4) 0 0 0 3px;
+}
+
+#restart:active {
+  background-color: #852323;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}

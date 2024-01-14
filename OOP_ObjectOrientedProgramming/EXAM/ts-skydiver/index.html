@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TypeScript The Falling</title>
+        <style>
+            @keyframes scrollBackground {
+            0% { background-position: left top; }
+            100% { background-position: right bottom; }
+            }
+
+            html, body {
+                margin: 0;
+            }
+            body {
+                background-color: darkred;
+                background-image: url('./assets/bg.png');
+                background-size: 110%;
+                background-position: right bottom;
+                /* animation: scrollBackground 60s ease-out 1; */
+            }
+            canvas {
+                display: block;
+                margin: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="game"></canvas>
+        <script src="build/app.js" type="module"></script>
+    </body>
+</html>
