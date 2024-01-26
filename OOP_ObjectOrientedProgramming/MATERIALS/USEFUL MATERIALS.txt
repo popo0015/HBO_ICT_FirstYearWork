@@ -1,0 +1,16 @@
+USEFUL MATERIALS
+
+1) 3.2 Git Branching - Basic Branching and Merging
+https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
+
+2) Git Branches Tutorial
+https://www.youtube.com/watch?v=e2IbNHi4uCI
+
+3) About pull requests
+https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests
+
+4) About Projects
+https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects
+
+5) About issues
+https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues
