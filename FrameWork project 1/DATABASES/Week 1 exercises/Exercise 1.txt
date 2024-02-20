@@ -1,0 +1,50 @@
+Question 1:
+CREATE TABLE Crocs (
+    Model TEXT,
+    Colour TEXT,
+    Size INTEGER,
+    Age INTEGER,
+    Odour INTEGER,
+    Damage INTEGER,
+    Value INTEGER
+);
+
+Question 2: 
+INSERT INTO Crocs
+(Model, Colour, Size, Age, Odour, Damage, Value)
+VALUES ("All-Terrain", "Black", 37, 38, 3, 2, 3495),
+("All-Terrain", "Red", 37, 3, 10, 4, 3995), 
+("Beyaband", "Tie-Dye", 36, 20, 5, 3, 2995)
+
+Question 3: 
+SELECT * FROM Crocs ORDER BY Age DESC;
+
+Question 4: 
+SELECT Model, Size FROM Crocs WHERE Colour="Black" OR Colour="Blue";
+
+Question 5: 
+SELECT Model, Colour, Value FROM Crocs WHERE Age > 24 AND Damage > 5
+
+Question 6: 
+SELECT ROUND(AVG(Size), 1) FROM Crocs;
+
+Question 7: 
+SELECT Model, (Odour * Damage) AS WearAndTear FROM Crocs 
+ORDER BY WearAndTear DESC;
+
+Question 8: 
+SELECT SUM(Value) FROM Crocs;
+
+Question 9: 
+SELECT Model, COUNT(*) AS TotalNumberOfShoes FROM Crocs GROUP BY Model;
+
+Question 10: 
+UPDATE Crocs SET
+    Colour = "Other"
+WHERE Colour NOT IN ("Black", "Red", "Blue", "Yellow" "Pink", "Green", "Purple", "White") 
+
+Question 11: 
+UPDATE Crocs SET Value = (Value - (Value * Odour * Damage)/100);
+
+Question 12:
+DELETE FROM Crocs WHERE Age > 50;

@@ -1,0 +1,36 @@
+Answer the following questions using SQL queries.
+
+1. How many models are in the database? - 10
+SELECT COUNT(*) FROM Roomba;
+
+2. How many models have Random navigation? - 4
+SELECT COUNT(*) FROM Roomba WHERE Navigation = "Random"
+
+3. Which model(s) can Auto Empty but do not have the capability to Save their Maps? - I3+
+SELECT Model FROM Roomba WHERE AutoEmpty = "TRUE" AND MapSaving = "FALSE"
+
+4. What is the highest dust capacity of all the models? (only show the Model and Capacity) - 600
+SELECT Model, Capacity FROM Roomba
+WHERE Capacity = (SELECT MAX(Capacity) FROM Roomba);
+
+5. Which 2 models have the highest run time (show only Model and Runtime)? - 120, 90
+SELECT Model, RunTime from Roomba ORDER BY RunTime DESC LIMIT 2;
+
+6. What the average Overall cleaning capability of Standard efficiency and High Efficiency models, respectively?
+SELECT Filtration, AVG(CleanOverall) AS OveralCleaning from Roomba 
+GROUP BY Filtration;
+
+7. What is the average Deep Cleaning capabilities of all models that have a “High Efficiency” filtration system? (Show the filtration type and the Average)
+SELECT Filtration, AVG(CleanDeep) AS OveralCleaning from Roomba 
+WHERE Filtration = "High Efficiency"
+GROUP BY Filtration;
+
+8. Which models have a better carpet cleaning than hard wood cleaning capacity?
+SELECT Model, CleanCarpets, CleanHardFloors from Roomba 
+WHERE CleanCarpets > CleanHardFloors;
+
+9. What is the average runtime of the Models with different cleaning capacities? (Show the capacity and the average)
+SELECT Model, Capacity, AVG(RunTime) from Roomba GROUP BY Capacity
+
+10. Show the Model and battery efficiency of all models by using the following formula (BatteryEfficiency = Battery/RuTime) order from highest to lower.
+SELECT Model, (Battery/RunTime) AS BatteryEfficiency from Roomba
