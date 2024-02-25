@@ -1,0 +1,90 @@
+CREATE TABLE Books (
+    BookID INTEGER PRIMARY KEY AUTO_INCREMENT, 
+    Title TEXT, 
+    AuthorID INTEGER, 
+    PublisherID INTEGER, 
+    ISBN TEXT, 
+    FOREIGN KEY (AuthorID) REFERENCES Authors(AuthorID) 
+        ON UPDATE CASCADE 
+        ON DELETE RESTRICT,
+    FOREIGN KEY (PublisherID) REFERENCES Publishers(PublisherID) 
+        ON UPDATE CASCADE 
+        ON DELETE RESTRICT
+);
+
+INSERT INTO Books (Title, AuthorID, PublisherID, ISBN)
+VALUES 
+    ('The Lord of the Rings', 4, 1, '978-0008537760'),
+    ('The Lord of the Rings', 4, 1, '978-0261103252'),
+    ('The Lord of the Rings', 4, 1, '978-0008376109'),
+    ('Harry Potter and the Philosophers Stone', 5, 2, '978-1408855652'),
+    ('The Hunger Games', 6, 3, '978-1407132082'),
+    ('The Hunger Games', 6, 3, '978-0439023481'),
+    ('Harry Potter and the Philosophers Stone', 5, 2, '978-1408855669');
+
+
+3. List all the Book Titles along with the Author’s Name. Order by Author then Title.
+SELECT DISTINCT Title, Name FROM (Books LEFT JOIN Authors ON
+Books.AuthorID = Authors.AuthorID) ORDER BY Name;
+
+4. List all the Book Titles, Author’s Name, Publisher’s Name and ISBN. Order by ISBN.
+SELECT Title, Authors.Name, Publishers.Name, ISBN FROM (Books
+LEFT JOIN Authors ON
+Books.AuthorID = Authors.AuthorID
+LEFT JOIN Publishers ON
+Books.PublisherID = Publishers.PublisherID)
+ORDER BY ISBN;
+
+5. List each Author’s name and the number of books they have. Order by Author.
+SELECT DISTINCT Authors.Name, COUNT(Title) AS BookCount 
+FROM (Books
+LEFT JOIN Authors ON
+Books.AuthorID = Authors.AuthorID)
+GROUP BY Authors.Name
+ORDER BY Authors.Name;
+
+6. List each Book Title and the Publisher’s Name. Show each title only once. Order by Publisher’s Name and then Book’s Title
+SELECT DISTINCT Books.Title, Publishers.Name
+FROM (Books
+LEFT JOIN Publishers ON
+Books.PublisherID = Publishers.PublisherID)
+ORDER BY Publishers.Name;
+
+
+EXERCISE 2
+1. List all the programmes and modules names. Show the Programme’s Name, Module’s Name. Order by Programme Name, then by Module Name.
+SELECT Modules.Name, Programmes.Name from (Modules LEFT JOIN Programmes ON Modules.ProgrammeID = Programmes.ProgrammeID) GROUP BY Modules.Name
+
+2. List the name of each module and then the name and surname of each lecturer that teacher in that module.
+SELECT DISTINCT Modules.Name, Lecturers.Name, Lecturers.Surname from
+(Modules LEFT JOIN LecturerModule ON Modules.ModuleID = LecturerModule.ModuleID
+LEFT JOIN Lecturers ON Lecturers.LecturerID = LecturerModule.LecturerID)
+
+3. List each student’s name, surname and the name of the programme they are registered for.
+SELECT Students.Name, Students.Surname, Programmes.Name from
+(Programmes LEFT JOIN StudentProgramme ON Programmes.ProgrammeID = StudentProgramme.ProgrammeID
+LEFT JOIN Students ON Students.StudentID = StudentProgramme.StudentID)
+
+4. How many modules does each programme have? Show the programme’s name, followed by the number of modules. Order by Programme Name
+SELECT DISTINCT Programmes.Name, COUNT(Modules.Name) AS CountOfModules FROM
+(Programmes LEFT JOIN Modules ON Programmes.ProgrammeID = Modules.ProgrammeID)
+GROUP BY Programmes.Name
+ORDER BY Programmes.Name;
+
+5. List each student’s name and surname and the name and surname of all the lecturers have been involved in the modules where they have been awarded a failing grade (grade less than 55). Order by student surname and then lecturer’s surname.
+SELECT DISTINCT Students.Name, Students.Surname, Lecturers.Name, Lecturers.Surname, Grades.Grade FROM
+(Students INNER JOIN Grades ON Students.StudentID = Grades.StudentID
+INNER JOIN Lecturers ON Lecturers.LecturerID = LecturerModule.LecturerID
+INNER JOIN LecturerModule ON LecturerModule.ModuleID = Modules.ModuleID
+INNER JOIN Modules ON Grades.ModuleID = Modules.ModuleID
+)
+WHERE (Grades.Grade < 55)
+ORDER BY Students.Name;
+ 
+6. Show each student’s Name, Surname, and the Name of the Programme they are enrolled in. Order by Student Surname
+7. Show each programme and the number of students registered for that programme. Order by programme name.
+8. How hard to the lecturers work? Show their name, surname, and the number of hours they’ve worked. Order by the number of hours worked (highest first)
+9. Show the Module’s Name and the Average grade (rounded to 2 decimals) for only the first attempt for each of the modules. Order it from largest to smallest average grade
+10. Show each student’s Name, Surname and the number of modules they have passed (the grade must be greater or equal to 55). Order by Student Surname
+11. Show each student’s name, surname and the name of the module and the grade where the grade is greater or equal than 55. Order by the student’s surnames, *then module’s name, then grade from highest to lowest*.
+12. **(BONUS DIFFICULT)** List each student’s name, surname and the number of credits they have earned thus far. The pass mark for a grade is more or equal than 55. Order by the student’s surname.
