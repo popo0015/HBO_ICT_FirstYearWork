@@ -8,6 +8,9 @@ Welcome to my little corner of GitHub, where I've curated all my adventures of m
 
 As a first-year ICT student, I've quickly learned that coding isn't just about typing commands into a computer; it's about solving puzzles, thinking creatively, and building something amazing from scratch. This repository serves as a living diary 📔 of my journey through the world of Information and Communication Technology.
 
+I am also creating GitHub Wiki pages (specifically for Laravel), that can hekp students navigate through the material:
+[View Laravel GitHub Wiki](https://github.com/popo0015/HBO_ICT_FirstYearWork/wiki/Laravel-Exam)
+
 ### What's Inside 📁
 
 - **Designs:** My attempts at translating requirements into blueprints for awesome applications.
